@@ -101,7 +101,7 @@ a {
 
 /* 멤버 링크 모음 */
 .member {
-  text-align: right;
+  text-align: left;
   padding: 4px 0;
   transform: translateX(8px);
 }

@@ -1,1 +1,106 @@
-/* CSS 스타일 */
+@import url("fonts.css");
+@import url("fontello.css");
+@import url("normalize.css");
+@import url("reset.css");
+
+/* 전체와 가상선택자 before, after를 보더 박스로. 기본값이 contents-box 인데 이것은 padding과 borderline 을 포함하지 않아 계산이 헷갈린다. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 기본 스타일 */
+html {
+  /* html에 font-size를 정함으로써 계산이 용이하게 하려는듯. */
+  font-size: 10px;
+}
+
+body {
+  /* ******************************폰트 설정 부분은 다시 봐야할듯 */
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+    "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
+    "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    sans-serif;
+  font-size: 1.4rem;
+  background-color: #ccc;
+}
+
+a {
+  /* a 태그들 전체 스타일 적용 */
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 전체 레이아웃 */
+.header,
+.visual,
+.main,
+.slogan,
+.footer {
+  width: 940px;
+  margin: 0 auto;
+}
+
+/* 헤더 영역 */
+.header {
+  background: white;
+  position: relative;
+  padding: 0px 30px;
+  /* border-radius는 좌상->우상->우하->좌하 순 */
+  border-radius: 0 0 15px 15px;
+  /* 보통은 height를 잘 정해주진 않지만, 메뉴는 고정이기에(요소가 더 추가되지 않으므로?) */
+  height: 120px;
+}
+
+.logo {
+  /* background-color: blue; */
+  position: absolute;
+  top: 45px;
+  left: 65px;
+}
+
+.member {
+  padding: 4px;
+  text-align: right;
+  transform: translateX(10px);
+}
+
+.member li,
+.member a,
+.member span {
+  display: inline-block;
+}
+
+.member a {
+  padding: 6px 8px 6px 10px;
+  text-transform: uppercase;
+}
+
+.navigation {
+  background: linear-gradient(to bottom, orange, orangered, orange);
+  border-top: 2px solid black;
+  border-radius: 0 0 5px 5px;
+  box-sizing: border-box;
+  height: 50px;
+}
+
+/* 비주얼 */
+.visual {
+  background-color: blanchedalmond;
+}
+
+/* 메인 */
+.main {
+  background-color: yellowgreen;
+}
+
+/* 슬로건 */
+.slogan {
+  background-color: pink;
+}
+/* 푸터 */
+.footer {
+  background-color: blue;
+  width: 100%;
+}
